@@ -1,24 +1,24 @@
 [
   {
-    "img": "../assets/images/budapest.jpg",
+    "img": "../media/images/budapest.jpg",
     "alt": "Budapest, Hungary",
     "name": "Budapest, Hungary",
     "button": "View Destination"
   },
   {
-    "img": "../assets/images/glarus-switzerland.jpg",
+    "img": "../media/images/glarus-switzerland.jpg",
     "alt": "Glarus, Switzerland",
     "name": "Glarus, Switzerland",
     "button": "View Destination"
   },
   {
-    "img": "../assets/images/venice-italy.jpg",
+    "img": "../media/images/venice-italy.jpg",
     "alt": "Venice, Italy",
     "name": "Venice, Italy",
     "button": "View Destination"
   },
   {
-    "img": "../assets/images/amsterdam.jpg",
+    "img": "../media/images/amsterdam.jpg",
     "alt": "Amsterdam, Netherlands",
     "name": "Amsterdam, Netherlands",
     "button": "View Destination"
