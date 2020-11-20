@@ -10,13 +10,7 @@ This is simply a front-end page, no backend was needed.
 ### Technologies
 
 ### Resource Links
-[Gatsby.js Tutorials](https://www.gatsbyjs.com/tutorial/)
-[Styled Components](https://styled-components.com/docs/basics#getting-started)
-[GraphQL](https://graphql.org/learn/)
-[React Icons](https://react-icons.github.io/)
-
-
-## 💫 Deploy
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+* [Gatsby.js Tutorials](https://www.gatsbyjs.com/tutorial/)
+* [Styled Components](https://styled-components.com/docs/basics#getting-started)
+* [GraphQL](https://graphql.org/learn/)
+* [React Icons](https://react-icons.github.io/)
