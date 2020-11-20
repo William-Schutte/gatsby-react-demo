@@ -32,7 +32,7 @@ const Trips = ({heading}) => {
     data.allTripsJson.edges.forEach((trip, index) => {
       tripsArray.push(
         <ProductCard key={index}>
-          <ProductImg src={trip.node.img.childImageSharp.fluid.src} fluid={trip.node.img.childImageSharp.fluid} alt={trip.node.alt} />
+          <ProductImg fluid={trip.node.img.childImageSharp.fluid} alt={trip.node.alt} />
           <ProductInfo>
             <TextWrap>
               <ImLocation />
