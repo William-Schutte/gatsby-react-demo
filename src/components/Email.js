@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import emailBg from '../media/images/afghanistan.jpg'
+import emailBg from '../media/images/river.jpg'
 import { Button } from './Button'
 
 const Email = () => {
@@ -14,7 +14,17 @@ const Email = () => {
             <label htmlFor="email">
               <input type="email" placeholder="Email" id="email" />
             </label>
-            <Button to="/">Sign Up</Button>
+            <Button as="button" type="submit" round="true" css={`
+              height: 48px; 
+              @media screen and (max-width: 768px) {
+                width: 100%;
+                min-width: 350px;
+              }
+              @media screen and (max-width: 400px) {
+                width: 100%;
+                min-width: 250px;
+              }
+              `}>Sign Up</Button>
           </FormWrapper>
         </form>
       </EmailContent>
@@ -26,8 +36,8 @@ export default Email
 
 const EmailContainer = styled.div`
   display: flex;
-  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.1) 100%), url(${emailBg}) no-repeat center;
-
+  background: linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0.65) 65%, rgba(0,0,0,0) 100%), url(${emailBg}) no-repeat center;
+  background-size: cover;
   height: 450px;
   width: 100%;
   padding: 5rem calc((100vw - 1300px) / 2);
@@ -59,13 +69,15 @@ const EmailContent = styled.div`
   }
 `
 const FormWrapper = styled.div`
-  padding: 1rem 1.5rem;
-  outline: none;
-  width: 350px;
-  height: 48px;
-  border-radius: 50px;
-  border: none;
-  margin-right: 1rem;
+  input {
+    padding: 1rem 1.5rem;
+    outline: none;
+    width: 350px;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 1rem;
+  }
   
   @media screen and (max-width: 768px) {
     display: flex;
