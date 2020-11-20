@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { menuData } from '../data/MenuData'
