@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
         </FooterLinkItems>
       </FooterLinksWrapper>
       <FooterLinksWrapper>
-      <FooterLinkItems>
+        <FooterLinkItems>
           <FooterLinkTitle>Details</FooterLinkTitle>
           <FooterLink to="/">Privacy</FooterLink>
           <FooterLink to="/">Terms</FooterLink>
