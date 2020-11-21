@@ -36,6 +36,9 @@ const StatsHeading = styled.div`
   font-size: clamp(1.5rem, 5vw, 2rem);
   margin-bottom: 3rem;
   padding: 0 2rem;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1.5rem;
+  }
 `
 const StatsWrapper = styled.div`
   display: grid;
@@ -43,10 +46,10 @@ const StatsWrapper = styled.div`
   gap: 10px;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr 1fr;
   }
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
   }
 `
 

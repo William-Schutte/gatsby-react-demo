@@ -45,15 +45,22 @@ const FooterContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   color: #39311d;
-  background: #fff;`
+  background: #fff;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
+
 const FooterLinksWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     grid-template-columns: 1fr;
   }
 `
+
 const FooterHeader = styled.div`
   padding: 0 2rem;
   

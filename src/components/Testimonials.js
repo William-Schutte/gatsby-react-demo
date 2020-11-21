@@ -57,6 +57,11 @@ const TestimonialsContainer = styled.div`
   color: #000;
   padding: 5rem calc((100vw - 1300px) / 2);
   height: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem; 
+  }
 `
 
 const TestimonialsTitle = styled.p`
@@ -72,6 +77,9 @@ const TestimonialsSubtitle = styled.p`
   margin-bottom: 4rem;
   font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: bold;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1.5rem;
+  }
 `
 
 const TestimonialsWrapper = styled.div`
@@ -95,7 +103,7 @@ const RightCol = styled.div`
   gap: 10px;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 `
 const Testimonial = styled.div`
