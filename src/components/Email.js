@@ -14,7 +14,7 @@ const Email = () => {
             <label htmlFor="email">
               <input type="email" placeholder="Email" id="email" />
             </label>
-            <Button as="button" type="submit" round="true" css={`
+            <Button as="button" type="submit" css={`
               height: 48px; 
               @media screen and (max-width: 768px) {
                 width: 100%;

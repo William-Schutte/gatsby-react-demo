@@ -38,7 +38,7 @@ const Trips = ({heading}) => {
               <ImLocation />
               <ProductTitle>{trip.node.name}</ProductTitle>
             </TextWrap>
-            <Button to="/trips" primary="true" round="true" css={`position: absolute; top: 420px; font-size: 14px;`}>{trip.node.button}</Button>
+            <Button to="/trips" primary="true" css={`position: absolute; top: 420px; font-size: 14px;`}>{trip.node.button}</Button>
           </ProductInfo>
         </ProductCard>
       )
@@ -64,6 +64,7 @@ const ProductsContainer = styled.div`
 const ProductsHeading = styled.div`
   font-size: clamp(1.2rem, 5vw, 3rem);
   text-align: center;
+  letter-spacing: 0.5rem;
   margin-bottom: 5rem;
   color: #000;
 `

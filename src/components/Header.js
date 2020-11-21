@@ -1,22 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { menuData } from '../data/MenuData'
 import { Button } from "./Button"
 
-const Header = () => {
+const Header = ({ toggleOpen }) => {
+  const [navColor, setNavColor] = useState(false);
+  
+  useEffect(() => {
+    if (window.location.pathname) {
+      setNavColor(window.location.pathname);
+    }
+  }, [])
+  
   return (
-    <Nav>
+    <Nav navColor={navColor}>
       <NavLink to="/">ADVENT(ur)</NavLink>
-      <Bars />
+      <Bars onClick={toggleOpen} />
       <NavMenu>
         {menuData.map((itm, index) => (
           <NavLink to={itm.link} key={index}>{itm.title}</NavLink>
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary="true" round="true" to="/trips">Book a Flight</Button>
+        <Button primary={(navColor === "/" ? true : false)} to="/trips">Book a Flight</Button>
       </NavBtn>
     </Nav>
   )
@@ -25,12 +33,12 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;
+  background: ${({navColor}) => (navColor !== "/") ? "#39311d" : "transparent"};
   height: 80px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1300px) / 2);
-  z-index: 10;
+  z-index: 5;
   position: relative;
 `
 

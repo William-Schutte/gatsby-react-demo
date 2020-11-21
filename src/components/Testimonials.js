@@ -29,12 +29,12 @@ const Testimonials = () => {
       <TestimonialsWrapper>
         <LeftCol>
           <Testimonial>
-            <IoMdCheckmarkCircleOutline css={`color: #3fffa8; font-size: 2rem; margin-bottom: 1rem;`}/>
+            <IoMdCheckmarkCircleOutline css={`color: #39311d; font-size: 2rem; margin-bottom: 1rem;`}/>
             <h3>Brandon Brandonton</h3>
             <p>"Never been so far from home and I absolutely loved it! Had tons of fun with everyone on the trip and saw some amazing wonders of the world."</p>
           </Testimonial>
           <Testimonial>
-            <FaRegLightbulb css={`color: #f9b19b; font-size: 2rem; margin-bottom: 1rem;`}/>
+            <FaRegLightbulb css={`color: #39311d; font-size: 2rem; margin-bottom: 1rem;`}/>
             <h3>Shel Mitchelson</h3>
             <p>"I didn't think giant adventures like this could be so accessible and safe. I also made some lifelong friends along the way. Thanks Advent(ur)!"</p>
           </Testimonial>
@@ -53,7 +53,7 @@ export default Testimonials
 
 const TestimonialsContainer = styled.div`
   width: 100%;
-  background: #f2efea;
+  background: #DEC6A9;
   color: #000;
   padding: 5rem calc((100vw - 1300px) / 2);
   height: 100%;
@@ -114,10 +114,17 @@ const Testimonial = styled.div`
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-style: italic;
+    color: #39311d;
   }
 
   p {
     color: #3b3b3b;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `
 
