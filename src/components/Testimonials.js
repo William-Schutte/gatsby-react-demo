@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io'
 import { FaRegLightbulb } from 'react-icons/fa'
 import { useStaticQuery, graphql } from 'gatsby'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Testimonials = () => {
+  useEffect(() => {
+    Aos.init({})
+  }, []);
+
+
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: {ext: {regex: "/(jpg)|(png)/"}, name: {regex: "/(portrait)/"}}) {
@@ -24,24 +31,51 @@ const Testimonials = () => {
 
   return (
     <TestimonialsContainer>
-      <TestimonialsTitle>Testimonials</TestimonialsTitle>
-      <TestimonialsSubtitle>Hear from recent Advent(ur)ers</TestimonialsSubtitle>
+      <TestimonialsTitle
+        data-aos="fade-right"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+      >Testimonials</TestimonialsTitle>
+      <TestimonialsSubtitle
+        data-aos="fade-right"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+      >Hear from recent Advent(ur)ers</TestimonialsSubtitle>
       <TestimonialsWrapper>
         <LeftCol>
-          <Testimonial>
-            <IoMdCheckmarkCircleOutline css={`color: #39311d; font-size: 2rem; margin-bottom: 1rem;`}/>
+          <Testimonial
+            data-aos="fade-right"
+            data-aos-delay="150"
+            data-aos-duration="1200"
+          >
+            <IoMdCheckmarkCircleOutline css={`color: #39311d; font-size: 2rem; margin-bottom: 1rem;`} />
             <h3>Brandon Brandonton</h3>
             <p>"Never been so far from home and I absolutely loved it! Had tons of fun with everyone on the trip and saw some amazing wonders of the world."</p>
           </Testimonial>
-          <Testimonial>
-            <FaRegLightbulb css={`color: #39311d; font-size: 2rem; margin-bottom: 1rem;`}/>
+          <Testimonial
+            data-aos="fade-right"
+            data-aos-delay="250"
+            data-aos-duration="1200"
+          >
+            <FaRegLightbulb css={`color: #39311d; font-size: 2rem; margin-bottom: 1rem;`} />
             <h3>Shel Mitchelson</h3>
             <p>"I didn't think giant adventures like this could be so accessible and safe. I also made some lifelong friends along the way. Thanks Advent(ur)!"</p>
           </Testimonial>
         </LeftCol>
-        <RightCol>
+        <RightCol
+          data-aos="fade-down"
+          data-aos-delay="200"
+          data-aos-duration="1200">
           {data.allFile.edges.map((image, index) => (
-            <Image key={index} fluid={image.node.childImageSharp.fluid} alt="User image"/>
+            <div
+              data-aos="fade-down"
+              data-aos-delay={`${400 - index * 200}`}
+              data-aos-duration="1400"
+              key={index}
+            >
+              <Image fluid={image.node.childImageSharp.fluid} alt="User image" />
+            </div>
+
           ))}
         </RightCol>
       </TestimonialsWrapper>

@@ -24,7 +24,7 @@ const Header = ({ toggleOpen }) => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary={(navColor === "/" ? true : false)} to="/trips">Book a Flight</Button>
+        <Button primary={(navColor === "/" ? "true" : "false")} to="/trips">Book a Flight</Button>
       </NavBtn>
     </Nav>
   )

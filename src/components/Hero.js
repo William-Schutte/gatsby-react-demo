@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Button } from './Button'
 import Video from '../media/videos/islands.mp4'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Hero = () => {
+	useEffect(() => {
+		Aos.init({})
+	}, []);
+
 	return (
 		<HeroContainer>
 			<HeroBackground>
@@ -11,9 +17,23 @@ const Hero = () => {
 			</HeroBackground>
 			<HeroContent>
 				<HeroItems>
-					<HeroH1>Unique Destinations</HeroH1>
-					<HeroP>Untold ADVENT(ur)</HeroP>
-					<Button big="true" to="/trips">Travel Now</Button>
+					<HeroH1
+						data-aos="fade-up"
+						data-aos-delay="50"
+						data-aos-duration="1000"
+					>Unique Destinations</HeroH1>
+					<HeroP
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-aos-duration="1000"
+					>Untold ADVENT(ur)</HeroP>
+					<div
+						data-aos="fade-up"
+						data-aos-delay="350"
+						data-aos-duration="1000"
+					>
+						<Button big="true" to="/trips">Travel Now</Button>
+					</div>
 				</HeroItems>
 			</HeroContent>
 		</HeroContainer>

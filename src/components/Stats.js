@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import statsData from '../data/StatsData'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Stats = () => {
+  useEffect(() => {
+    Aos.init({})
+  }, []);
+
   return (
     <StatsContainer>
       <StatsHeading>What to expect</StatsHeading>
       <StatsWrapper>
         {statsData.map((item, index) => (
-          <StatsBox key={index}>
+          <StatsBox
+            key={index}
+            data-aos="flip-left"
+            data-aos-delay={`${index * 150}`}
+            data-aos-duration="1000"
+          >
             <StatIcon>{item.icon}</StatIcon>
             <StatTitle>{item.title}</StatTitle>
             <StatDescription>{item.desc}</StatDescription>
